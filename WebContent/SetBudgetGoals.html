@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Create Application</title>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <script src="resources/js/jquery-2.1.1.min.js"></script>
+		<script src="resources/js/SetBudgetGoals.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Set Budget Goals</h1>
+			</header>
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                         <div id="wrapper">
+                       <div id="login" class="animate form">
+                       	<h1>Set Budget Goals for current Month</h1>
+                       	<form id="frm6" action="javascript:mySubmitFunctiondectl()">
+                           <table id="dectl" style="width:100%">
+							  <tr>
+							  	<th>Budget Item</th>
+							  	<th>Budget Month</th>
+							  	<th>Budget Target</th>
+							  
+							  </tr>
+							  <tr>
+							  	<td>Food</td>
+							  	<td>Dec</td>
+							  	<td><input type="text" id="exp1" class="myclass" name="exp1"/></td>
+							  	</tr>
+							  <tr><td>Education</td>
+							  		<td>Dec</td>
+							  	<td><input type="text" id="exp2" class="myclass" name="exp2"/></td>
+							  </tr>
+							  <tr><td>Transport</td>
+							  		<td>Dec</td>
+							  	<td><input type="text" id="exp3" class="myclass" name="exp3"/></td>
+							  </tr>
+							  <tr><td>Entertainment</td>
+							  		<td>Dec</td>
+							  	<td><input type="text"id="exp4" class="myclass" name="exp4"/></td>
+							  </tr>
+							  <tr><td>Misellaneous</td>
+							  		<td>Dec</td>
+							  	<td><input type="text" id="exp5" class="myclass" name="exp5"/></td>
+							  </tr>
+							  </table>
+    
+							  <p> 
+                                    <input type="hidden" name="methodId" id="methodId" value="setbudgoals"/>
+								</p>   
+							   <p>
+                                	<label id="lblDisplayMsg"><font color="red"></font></label>
+                                </p>         
+						<p class="signin button"> 
+									<input name="submit" type="submit" value="Submit"/> 
+								</p>
+                    </form>
+							 
+                    </div>
+            </div>
+                      
+        </div>
+    </body>
+</html>
