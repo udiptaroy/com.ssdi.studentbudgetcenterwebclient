@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Enter Transactions</title>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <script src="resources/js/jquery-2.1.1.min.js"></script>
+		<script src="resources/js/Transactions.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Enter Transactions for current Month</h1>
+			</header>
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                         <div  id="wrapper" style="width:1000px;">
+                       <div id="login" class="animate form">
+                       	<h1>Enter expenditure for current Month</h1>
+                       	<form id="frm3" action="javascript:mySubmitFunctiontran()">
+                           <table id="tran" style="width:100%">
+							  <tr>
+							  	<th>Description</th>
+							  	<th>Category</th>
+							  	<th>Amount</th>
+							  	<th>Date</th>
+							  
+							  </tr>
+							  <tr>
+							  	<td><input type="text" id="itm1" class="myclass1" name="itm1" style="width:150px;"/></td>
+							  	<td><select id="cat1" name="cat1" class="myclass" style="height:30px;"><option>Food</option><option>Education</option><option>Transport</option><option>Entertainment</option><option>Miscellaneous</option></select></td>
+							  	<td><input type="text" id="exp1" class="myclass" name="exp1" style="width:150px;"/></td>
+							  	<td><input type="date" id="dt1" name="dt1" style="width:150px;"/></td>
+							  	</tr>
+							  <tr><td><input type="text" id="itm2" class="myclass1" name="itm2" style="width:150px;"/></td>
+							  <td><select id="cat2" name="cat2" class="myclass" style="height:30px;"><option>Food</option><option>Education</option><option>Transport</option><option>Entertainment</option><option>Miscellaneous</option></select></td>
+							  	<td><input type="text" id="exp2" class="myclass" name="exp2" style="width:150px;"/></td>
+							  	<td><input type="date" id="dt2"  name="dt2" style="width:150px;"/></td>
+							  </tr>
+							  <tr><td><input type="text" id="itm3" class="myclass1" name="itm3" style="width:150px;"/></td>
+							  		<td><select id="cat3" name="cat3" class="myclass" style="height:30px;"><option>Food</option><option>Education</option><option>Transport</option><option>Entertainment</option><option>Miscellaneous</option></select></td>
+							  	<td><input type="text" id="exp3" class="myclass" name="exp3" style="width:150px;"/></td>
+							  	<td><input type="date" id="dt3" name="dt3" style="width:150px;"/></td>
+							  </tr>
+							  <tr><td><input type="text" id="itm4" class="myclass1" name="itm4" style="width:150px;"/></td>
+							  		<td><select id="cat4" name="cat4" class="myclass" style="height:30px;"><option>Food</option><option>Education</option><option>Transport</option><option>Entertainment</option><option>Miscellaneous</option></select></td>
+							  	<td><input type="text"id="exp4" class="myclass" name="exp4" style="width:150px;"/></td>
+							  	<td><input type="date" id="dt4" name="dt4" style="width:150px;"/></td>
+							  </tr>
+							  <tr><td><input type="text" id="itm5" class="myclass1" name="itm5" style="width:150px;"/></td>
+							  <td><select id="cat5" name="cat5" class="myclass" style="height:30px;"><option>Food</option><option>Education</option><option>Transport</option><option>Entertainment</option><option>Miscellaneous</option></select></td>
+							  	<td><input type="text" id="exp5" class="myclass" name="exp5" style="width:150px;"/></td>
+							  	<td><input type="date" id="dt5" name="dt5" style="width:150px;"/></td>
+							  </tr>
+							  </table>
+    
+							  <p> 
+                                    <input type="hidden" name="methodId" id="methodId" value="transactions"/>
+								</p>   
+							   <p>
+                                	<label id="lblDisplayMsg"><font color="red"></font></label>
+                                </p>         
+						<p class="signin button"> 
+									<input name="submit" type="submit" value="Submit"/> 
+								</p>
+                    </form>
+							 
+                    </div>
+            </div>
+                      
+        </div>
+    </body>
+</html>
