@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+  <Product ProductID="1">
+    <ProductName>Chai</ProductName>
+    <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
+    <UnitPrice>18.0000</UnitPrice>
+   </Product>
+  <Product ProductID="2">
+    <ProductName>Chai</ProductName>
+    <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
+    <UnitPrice>18.0000</UnitPrice>
+  </Product>
+  <Product ProductID="3">
+   <ProductName>Chai</ProductName>
+    <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
+    <UnitPrice>18.0000</UnitPrice>
+  </Product>
+  <Product ProductID="4">
+    <ProductName>Chef Anton's Cajun Seasoning</ProductName>
+       <ProductName>Chai</ProductName>
+    <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
+    <UnitPrice>18.0000</UnitPrice>
+  </Product>
+  <Product ProductID="5">
+       <ProductName>Chai</ProductName>
+    <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
+    <UnitPrice>18.0000</UnitPrice>
+  </Product>
+  <Product ProductID="6">
+       <ProductName>Chai</ProductName>
+    <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
+    <UnitPrice>18.0000</UnitPrice>
+  </Product>
+  <Product ProductID="7">
+    <ProductName>Uncle Bob's Organic Dried Pears</ProductName>
+      <ProductName>Chai</ProductName>
+    <QuantityPerUnit>10 boxes x 20 bags</QuantityPerUnit>
+    <UnitPrice>18.0000</UnitPrice>
+  </Product>
+  </Products>

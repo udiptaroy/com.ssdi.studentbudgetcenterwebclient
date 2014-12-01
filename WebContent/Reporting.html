@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+		<title>Report</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Category', 'Amount Spent'],
+          ['Shopping',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Entertainment', 2],
+          ['Utilities',    7],
+          ['Miscellaneous',    7]
+        ]);
+
+        var options = {
+          title: 'My Expenditures',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Category', 'Amount Spent'],
+          ['Shopping',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Entertainment', 2],
+          ['Utilities',    7],
+          ['Miscellaneous',    7]
+        ]);
+
+        var options = {
+          title: 'Others Expenditures',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d1'));
+        chart.draw(data, options);
+      }
+    </script>
+		<link rel="stylesheet" type="text/css" href="resources/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/animate-custom.css" />
+	
+	<body>
+		<div class="container">
+
+			<header>
+				<h1>Report Dashboard <span>for User</span></h1>
+
+				<div id="report_tab" >
+					<nav>
+						<ul>
+							<li>
+								<a href="#">Historical Data</a>
+							</li>
+							<li>
+								<a href="#compData">Comparitive Data</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- <div
+			style="border: 1px solid;border-radius: 0px; width:90%; height:100%; margin-left:auto;
+			margin-right:auto;padding: 10px 10px 10px 10px;text-align: left;"> -->
+				<div id="wrapper" >
+					<div id="report_background" class="animate form">
+						<form >
+							Month:
+							<select >
+								<option value="volvo">January</option>
+								<option value="feb">February</option>
+								<option value="mar">March</option>
+								<option value="apr">April</option>
+							</select>
+							<div id="piechart_3d" style="width: 900px; height: 250px;"></div>
+							<div id="piechart_3d1" style="width: 900px; height: 250px;"></div>
+							
+					</form>
+					 
+					</div>
+				</div>
+			</div>
+
+	</body>
+</html>

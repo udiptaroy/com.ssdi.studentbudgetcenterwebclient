@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Account Management Form with Student Budget Center</title>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <script src="resources/js/jquery-2.1.1.min.js"></script>
+		<script src="resources/js/Update.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Account Management <span>for Student Budget Center</span></h1>
+				            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form id="frm4" action="javascript:mySubmitFunctionForm4()"> 
+                                <h1>Manage Account</h1> 
+                                <p> 
+                                    <label for="username" class="username" > Your username</label>
+                                    <input id="username" name="username" required="required" type="text" disabled/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p> 
+                                    <label for="email" class="youmail" > Your email</label>
+                                    <input id="email" name="email" type="email" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                </p>
+                                
+                                 <p> 
+                                    <label for="bankaccount" class="bankaccount">Your bank account number</label>
+                                    <input id="bankaccount" name="bankaccount" required="required" type="text" placeholder="Account#"/>
+                                </p>
+                                <p>
+                                	<label id="lblDisplayMsg"></label>
+                                </p>
+                                 <p class="login button"> 
+                                    <input name="submit" type="submit" value="Update" /> 
+								</p>
+								<p> 
+                                    <input type="hidden" name="methodId" id="methodId" value="updateAccount"/>
+								</p>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

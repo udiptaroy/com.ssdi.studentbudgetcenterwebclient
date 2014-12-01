@@ -1,7 +1,6 @@
 function mySubmitFunctiontran(){
 	value = $('#frm3').serialize();
-	alert(value);
-    $.ajax({
+	    $.ajax({
     	
  	type: "POST",
  	  url: "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?"+value,

@@ -2,15 +2,12 @@ $(document).ready(function(){
 	
 	$("#lblDisplayMsg").text("");
 	
-	$.getJSON( "UpdateFunctions?requestName=getUserDetails", function(data) {
+	$.getJSON( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodName=getUserData", function(data) {
 		if(data != null){
-			$("#email").val(data.email);
-			$("#name").val(data.name);
+			$("#username").val(data.username);
 			$("#password").val(data.password);
-			$("#address").val(data.address);
-			$("#selectState").val(data.state);
-			$("#selectCountry").val(data.country);
-			$("#ssn").val(data.ssn);
+			$("#email").val(data.email);
+			$("#bankaccount").val(data.bankaccount);
 		}else{
 			$("#lblDisplayMsg1").text("error in fetching details");
 		}
@@ -20,22 +17,24 @@ $(document).ready(function(){
 
 function mySubmitFunctionForm4(){
 	 value = $('#frm4').serialize();
-    $.ajax({
- 	type: "POST",
-     url: "UpdateFunctions",
-     data: value,
-     dataType: "json",
-     //if received a response from the server
-     success: function(data) {
-     	if(data =="true"){
-     		$("#lblDisplayMsg").text("Details updated successfully.");
-     	}
-     	else{
-     		//alert("User not found");
-     		$("#lblDisplayMsg").text("Error in updating contact details");
-     	}
-     	
-          
-     }
-    });
+	 $.ajax({
+		 	type: "POST",
+		     url: "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?"+value,
+		     async:true,
+		     contentType: "application/json; charset=utf-8",
+		     success: function(json) {
+		     	if(json =="SUCCESS"){
+		     		  window.location="StudentHome.html";
+		     	}
+		     	else{
+		     		//alert("User not found");
+		     		$("#lblDisplayMsg1").text(json);//"User not found in System. Kindly register."
+		     	}
+		     },
+		    //If there was no response from the server
+		    error: function(jqXHR, textStatus, errorThrown){
+		         console.log("Something really bad happened " + textStatus);
+		          $("#lblDisplayMsg1").text(textStatus);
+		    }  
+		});
 } 
