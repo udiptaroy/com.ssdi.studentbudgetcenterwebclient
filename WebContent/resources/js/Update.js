@@ -12,7 +12,7 @@ $(document).ready(function(){
 			$("#lblDisplayMsg1").text("error in fetching details");
 		}
 	},"json");*/
-	$.getJSON( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodID=getUserData", 
+	/*$.getJSON( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodID=getUserData", 
 	    	function(data) {		
 		if(data != null){
 			$("#username").val(data.username);
@@ -24,7 +24,7 @@ $(document).ready(function(){
 		}
 			});
 	            
-  });
+  });*/
 
 function mySubmitFunctionForm4(){
 	 value = $('#frm4').serialize();
