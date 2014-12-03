@@ -216,7 +216,7 @@ function CreateFriendRequest() {
 function populateUserList() {
 	$.ajax({
 		type : "GET",
-		url : "../com.ssdi.studentbudgetcenterserver/rest/usercontroller",
+		url : "../com.ssdi.studentbudgetcenterserver/rest/requestcontroller",
 		data : {
 			methodId : "getUserNames"
 		},
