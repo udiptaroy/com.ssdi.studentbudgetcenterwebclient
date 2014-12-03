@@ -49,9 +49,11 @@
         $(document).ready(function () {	
     	$.getJSON( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodID=historicalreports", 
     	function(result) {		
-		//alert(result);
+		
 		});
 	
+    window.setTimeout(function() {
+        // this will execute 5 seconds later
     
             var url = "resources/BudgetReport.xml";
             // prepare the data
@@ -103,6 +105,7 @@
             });
       	
         });
+        }, 50000);
     </script>
 <body>
 	
@@ -111,7 +114,9 @@
 				<h1>Report Dashboard <span>for User</span></h1>
 
 </header>
-
+						<div >
+                         	 <a href="StudentHome.html">Go to Home Page</a>
+                       </div>
 
 <div id="tabs">
   <ul>
@@ -128,16 +133,16 @@
 							</p> 
      					</div>
      					
-     					<img class="img" src="resources/BudgetExpPie.png" border="0">
+     					<img class="img" src="resources/PieOwn.png" border="0">
 					</form>
 					
 				</div>
   </div>
   <div id="tabs-3">
     <form >
-			<img class="img" src="resources/PieOwn.png" border="0">
+    		<img class="img" src="resources/PieOwn.png" border="0">
 			<img class="img" src="resources/PieOther.png" border="0">
-					</form>
+						</form>
   </div>
 </div>
 

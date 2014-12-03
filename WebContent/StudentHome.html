@@ -12,12 +12,21 @@
         <link rel="stylesheet" type="text/css" href="resources/css/style3.css" />
 		<link rel="stylesheet" type="text/css" href="resources/css/animate-custom.css" />
     </head>
+    <script type="text/javascript">
+    function myLogout(){
+	 
+		     		  window.location="index.html";
+		     	
+		}
+
+    </script>
     <body>
 
           <div class="container">
             <header>
                 <h1>Budget Center Home <span>for Group6</span></h1>
 				            </header>
+				            <form id="frm19"> 
             <section>
             		<div id="container_demo" >
 	               <div id="wrapper">
@@ -86,7 +95,7 @@
                                <div id="wrapper">
                                  <div id="friends" class="animate form">
                                <form>
-                                <h1>Account Mangement</h1>
+                                <h1>Set Budget Goals</h1>
                                 <p>
                                     <a href="SetBudgetGoals.html">
 									<img class="img" src="resources/images/Transaction.jpg" border="0">
@@ -97,9 +106,14 @@
 
                             </div>
                               </div>
+                             
 
                                         </div>
                                         </section>
+                                        <p class="signin button"> 
+									<input name="submit" type="submit" value="Logout" onclick="javascript:myLogout()"/> 
+								</p>
+								</form>
         </div>
     </body>
 </html>

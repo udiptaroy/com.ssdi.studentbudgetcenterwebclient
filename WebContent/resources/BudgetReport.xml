@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<BudgetDetails>
+    <Expense id="1">
+        <Item>fndnfgg</Item>
+        <Category>Food</Category>
+        <Date>2014-12-10</Date>
+        <Amount>123.0</Amount>
+    </Expense>
+    <Expense id="2">
+        <Item>eegwrg</Item>
+        <Category>Education</Category>
+        <Date>2014-12-18</Date>
+        <Amount>1324.0</Amount>
+    </Expense>
+    <Expense id="3">
+        <Item>wgweg</Item>
+        <Category>Transport</Category>
+        <Date>2014-12-10</Date>
+        <Amount>12.0</Amount>
+    </Expense>
+    <Expense id="4">
+        <Item>ewgwg</Item>
+        <Category>Entertainment</Category>
+        <Date>2014-12-05</Date>
+        <Amount>34.0</Amount>
+    </Expense>
+    <Expense id="5">
+        <Item>qeewg</Item>
+        <Category>Miscellaneous</Category>
+        <Date>2014-12-03</Date>
+        <Amount>11.0</Amount>
+    </Expense>
+</BudgetDetails>
