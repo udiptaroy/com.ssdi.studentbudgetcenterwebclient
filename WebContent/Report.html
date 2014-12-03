@@ -20,26 +20,53 @@
     <script type="text/javascript" src="resources/jqwidgets/jqxgrid.selection.js"></script> 
     <script type="text/javascript" src="resources/jqwidgets/jqxgrid.edit.js"></script> 
     <script type="text/javascript" src="resources/jqwidgets/demos.js"></script>
+     <script type="text/javascript" src="resources/jQueryUI/jquery-ui.css"></script>
+      <script type="text/javascript" src="resources/jQueryUI/jquery-ui.js"></script>
+      
+   
     <link rel="stylesheet" type="text/css" href="resources/css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="resources/css/style1.css" />
-		<link rel="stylesheet" type="text/css" href="resources/css/animate-custom.css" />
+          <link rel="stylesheet" type="text/css" href="resources/css/style1.css" />
+           <link rel="stylesheet" type="text/css" href="resources/css/animate-custom.css" />
+   
+		
 	</head>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            var url = "resources/jqwidgets/products.xml";
+     $(function() {
+    $( "#tabs" ).tabs();
+    
+  });
+  
+  function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+   
+   
+        $(document).ready(function () {	
+    	$.getJSON( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodID=historicalreports", 
+    	function(result) {		
+		//alert(result);
+		});
+	
+    
+            var url = "resources/BudgetReport.xml";
             // prepare the data
             var source =
             {
                 datatype: "xml",
                 datafields: [
-                    { name: 'ProductName', type: 'string' },
-                    { name: 'QuantityPerUnit', type: 'int' },
-                    { name: 'UnitPrice', type: 'float' }
+                    { name: 'Item', type: 'string' },
+                    { name: 'Category', type: 'string' },
+                    { name: 'Date', type: 'string' },
+                    { name: 'Amount', type: 'double' }
                 ],
-                root: "Products",
-                record: "Product",
-                id: 'ProductID',
+                root: "BudgetDetails",
+                record: "Expense",
+                id: 'id',
                 url: url
             };
             var cellsrenderer = function (row, columnfield, value, defaulthtml, columnproperties, rowdata) {
@@ -68,54 +95,50 @@
                 editable: true,
                 selectionmode: 'multiplecellsadvanced',
                 columns: [
-                  { text: 'Product Name', columngroup: 'ProductDetails', datafield: 'ProductName', width: 250 },
-                  { text: 'Quantity per Unit', columngroup: 'ProductDetails', datafield: 'QuantityPerUnit', cellsalign: 'right', align: 'right', width: 200 },
-                  { text: 'Unit Price', columngroup: 'ProductDetails', datafield: 'UnitPrice', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 }
+                  { text: 'Item', columngroup: 'Item', datafield: 'Item', width: 250 },
+                  { text: 'Category', columngroup: 'Category', datafield: 'Category', cellsalign: 'right', align: 'right', width: 200 },
+                  { text: 'Date', columngroup: 'Date', datafield: 'Date', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 },
+                  { text: 'Amount', columngroup: 'Amount', datafield: 'Amount', align: 'right', cellsalign: 'right', cellsformat: 'c2', width: 200 }
                 ]
             });
+      	
         });
     </script>
-</head>
 <body>
-		<div class="container">
-
+	
+	<div class="container">
 			<header>
 				<h1>Report Dashboard <span>for User</span></h1>
 
-				<div id="report_tab" >
-					<nav>
-						<ul>
-							<li>
-								<a href="#">Historical Data</a>
-							</li>
-							<li>
-								<a href="#compData">Comparitive Data</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</header>
+</header>
 
-			<!-- <div
-			style="border: 1px solid;border-radius: 0px; width:90%; height:100%; margin-left:auto;
-			margin-right:auto;padding: 10px 10px 10px 10px;text-align: left;"> -->
-				<div id="wrapper" >
-					<div id="report_background" class="animate form">
-						<form >
-							Month:
-							<select >
-								<option value="volvo">January</option>
-								<option value="feb">February</option>
-								<option value="mar">March</option>
-								<option value="apr">April</option>
-							</select>
-							    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
-        <div id="jqxgrid">
-        </div>
-     </div>
-							
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-2">Historical Data</a></li>
+    <li><a href="#tabs-3">Comparitive data</a></li>
+  </ul>
+  <div id="tabs-2">
+   <div id="sss" >
+					 <form >
+						<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+	        				<div id="jqxgrid"></div>
+					        <p class="login button"> 
+	                        	 <input name="submit" type="submit" value="Submit" /> 
+							</p> 
+     					</div>
+     					
+     					<img class="img" src="resources/BudgetExpPie.png" border="0">
 					</form>
-					 
-					</div>
+					
 				</div>
-			</div>
+  </div>
+  <div id="tabs-3">
+    <form >
+			<img class="img" src="resources/PieOwn.png" border="0">
+			<img class="img" src="resources/PieOther.png" border="0">
+					</form>
+  </div>
+</div>
+
+</div>

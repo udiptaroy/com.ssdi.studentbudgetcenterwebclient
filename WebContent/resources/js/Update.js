@@ -2,7 +2,7 @@ $(document).ready(function(){
 	
 	$("#lblDisplayMsg").text("");
 	
-	$.getJSON( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodName=getUserData", function(data) {
+	/*$.get( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodID=getUserData",{}, function(data) {
 		if(data != null){
 			$("#username").val(data.username);
 			$("#password").val(data.password);
@@ -11,7 +11,18 @@ $(document).ready(function(){
 		}else{
 			$("#lblDisplayMsg1").text("error in fetching details");
 		}
-	});
+	},"json");*/
+	$.getJSON( "../com.ssdi.studentbudgetcenterserver/rest/usercontroller?methodID=getUserData", 
+	    	function(data) {		
+		if(data != null){
+			$("#username").val(data.username);
+			$("#password").val(data.password);
+			$("#email").val(data.email);
+			$("#bankaccount").val(data.account);
+		}else{
+			$("#lblDisplayMsg1").text("error in fetching details");
+		}
+			});
 	            
   });
 
